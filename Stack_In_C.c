@@ -39,7 +39,6 @@ int Pop(struct Stack *stack) {
 	if(stack->IsEmpty(stack)) {
 		return INT_MIN;
 	} else {
-		printf("out\n");
 		int popNumber;
 		stack->top -= 1;
 		popNumber = *(stack->numbers + stack->top);
@@ -51,7 +50,6 @@ void ShowAllElement(struct Stack *stack) {
 		return;
 	} else {
 		int index = stack->top;
-		printf("top = %d\n", stack->top);
 		for(index -= 1; index >= 0; index--) {
 			printf("|%d|\n", *(stack->numbers + index));
 		}
